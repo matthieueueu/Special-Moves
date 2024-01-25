@@ -1,15 +1,62 @@
-h1{
-    font-weight: bold;
-    font-size: xx-large;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color:black;
-
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+@keyframes slideFromTop{
+    from{   
+        transform: translateY(-200px);
+    }
+    to{
+        transform: translateY(0);
+    }
 }
 
+@keyframes slideFromBottom{
+    from{   
+        transform: translateY(250px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+@keyframes grow{
+    0%{
+        transform: scale(0.4);
+        opacity: 0.5;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: red;
+    font-weight: bold;
+    background-color:lightsalmon;
+}
 
+h1{
+    font-weight: bold;
+    font-size: xxx-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:black;
+    margin-bottom: 4%;
+    display: flex;
+    justify-content: center;
+
+    animation: slideFromTop 1s ease;
+}
+#energy{
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 7%;
+    animation: grow 1s;
 }
 
 #body{
@@ -28,15 +75,30 @@ body{
     display: flex;
     justify-content:center;
     align-items:baseline;
+    
+    animation: slideFromBottom 1s ease;
 }
+
+
 
 button{
     margin:1%;
     font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    border-color: white;
+
+    transition: all 0.3s;
+    animation: spin 2s linear infinite;   
 }
 
 button:hover{
     cursor: pointer;
+    color: white;
+    background-color: cornflowerblue;
+    border-color: white;
+
+    transform: translate(1px,-5px);
 } 
 
 button:hover #normal{
@@ -58,3 +120,12 @@ button:hover #hoverShovel:before{
 button:hover #hoverBomb:before{
     content: "Energy cost = 50";
 }
+
+#ad{
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 1%;
+
+    animation: slideFromBottom 1s ease;
+}
+

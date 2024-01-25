@@ -2,6 +2,12 @@ const print = console.log;
 
 let energy = 100
 
+alert("Click on different moves to complete different actions.")
+alert("Different moves require different amounts of energy.")
+alert("Don't waste all your energy otherwise it's GAMEOVER.")
+alert("This website is brought to you by Raid Shadow Legends.")
+alert("Click on ad for +20 energy (only works if you have 80 energy or less)")
+
 let specialMove = [
     "run over by a car",
     "waterboarding",
@@ -24,6 +30,8 @@ function checkEnergy(){
     if (energy < 1){
         document.getElementById("body").innerHTML = `<h2>GAME OVER</h2>`
         document.getElementById("image").innerHTML = ``
+        document.getElementById("addEnergy").innerHTML = `THANK YOU FOR PLAYING`
+
         energy = 0;
         document.getElementById("energy").innerHTML = `Energy level = ${energy}`;
         document.getElementById("addEnergy").disabled = true;
@@ -102,6 +110,11 @@ function onClickGetMoreEnergy(){
     } else if (energy>100){
         document.getElementById("addEnergy").disabled = true;
     }
+}
+
+function onClickAd(){
+    energy += 20;
+    document.getElementById("energy").innerHTML = `Energy level = ${energy}`;
 }
 
 document.getElementById("energy").innerHTML += `Energy level = ${energy}`
