@@ -11,24 +11,41 @@
 </head>
 <body>
     <h1><i>Special Techniques</i></h1>
-
     <div id="energy"></div>
 
-    <button id="car" onclick="onClickCar()">Click for run over by a car</button>
-    <div id="car1"></div>
-    <br>
-    <button id="water" onclick="onClickWater()">Click for waterboarding</button>
-    <div id="water1"></div>
-    <br>
-    <button id="burn" onclick="onClickBurn()">Click for burning</button>
-    <div id="burn1"></div>
-    <br>
-    <button id="shovel" onclick="onClickShovel()">Click for rusted shovel</button>
-    <div id="shovel1"></div>
-    <br>
-    <button id="bomb" onclick="onClickBomb()">Click for H-Bomb</button>
-    <div id="bomb1"></div>
+    <div id="body">
+        <button id="car" onclick="onClickCar()">
+            <span id="normal">Click for run over by car</span>
+            <span id="hover"></span>
+        </button>
+        <br>
+        <button id="water" onclick="onClickWater()">
+            <span id="normal">Click for waterboarding</span>
+            <span id="hover"></span>
+        </button>
+        <br>
+        <button id="burn" onclick="onClickBurn()">
+            <span id="normal">Click for burning</span>
+            <span id="hoverBurn"></span>
+        </button>
+        <br>
+        <button id="shovel" onclick="onClickShovel()">
+            <span id="normal">Click for rusted shovel</span>
+            <span id="hoverShovel"></span>
+        </button>
+        <br>
+        <button id="bomb" onclick="onClickBomb()">
+            <span id="normal">Click for H-Bomb</span>
+            <span id="hoverBomb"></span>
+        </button>
 
+    </div>
+    <div id="image"></div>
+
+
+    <div id="moreEnergy">
+        <button id="addEnergy" onclick="onClickGetMoreEnergy()">Click for more energy</button>
+    </div>
 
     <script src="index.js"></script>
 </body>

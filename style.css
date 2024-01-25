@@ -9,12 +9,52 @@ h1{
 body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: red;
+
+}
+
+#body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#moreEnergy{
+    display: flex;
+    justify-content:center;
+    align-items:baseline;
 }
 
 button{
-    margin: 1%;
+    margin:1%;
+    font-size: large;
 }
 
 button:hover{
     cursor: pointer;
 } 
+
+button:hover #normal{
+    display: none;
+}
+
+button:hover #hover:before{
+    content: "Energy cost = 10";
+}
+
+button:hover #hoverBurn:before{
+    content: "Energy cost = 20";
+}
+
+button:hover #hoverShovel:before{
+    content: "Energy cost = 5";
+}
+
+button:hover #hoverBomb:before{
+    content: "Energy cost = 50";
+}
